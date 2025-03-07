@@ -26,8 +26,8 @@ public class MapleJewelSimulator {
         randomTable.put(6, createRandomPercentage(80, 0, 20));
         randomTable.put(7, createRandomPercentage(40, 40, 20));
         randomTable.put(8, createRandomPercentage(40, 40, 20));
-        randomTable.put(9, createRandomPercentage(30, 45, 25)); // Not Sure
-        randomTable.put(10, createRandomPercentage(30, 40, 30)); // Not Sure
+        randomTable.put(9, createRandomPercentage(30, 40, 30));
+        randomTable.put(10, createRandomPercentage(30, 40, 30));
 
     }
 
@@ -155,6 +155,9 @@ public class MapleJewelSimulator {
         public void increasePrice() {
             if(level > 5){
                 price+=2;
+                return;
+            } else if (level > 8) {
+                price+=3;
                 return;
             }
             price+=1;
